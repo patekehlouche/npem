@@ -1,0 +1,397 @@
+
+/* ==============================
+   CONFIGURATION GENERALE
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080808;
+    color: #ffffff;
+}
+
+
+/* ==============================
+   ACCUEIL / BACKGROUND
+============================== */
+
+.hero {
+    width: 100%;
+    min-height: 700px;
+    height: 100vh;
+
+    background-image: url("assets/background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+/* LOGO */
+
+.logo {
+    width: 520px;
+    max-width: 85%;
+    height: auto;
+
+    border-radius: 50%;
+    object-fit: contain;
+
+    filter: drop-shadow(0 10px 25px rgba(0,0,0,0.4));
+}
+
+
+/* ==============================
+   SECTION PETITION
+============================== */
+
+.petition {
+    background: #ffffff;
+    color: #080808;
+
+    padding: 110px 8%;
+    text-align: center;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.petition h1 {
+    font-size: clamp(35px, 5vw, 65px);
+    font-weight: 1000;
+    letter-spacing: -2px;
+
+    margin-bottom: 70px;
+}
+
+
+/* TEXTE DE LA PETITION */
+
+.petition-text {
+    text-align: left;
+
+    font-size: 20px;
+    line-height: 1.9;
+    font-weight: 500;
+
+    margin-bottom: 65px;
+}
+
+.petition-text p {
+    margin-bottom: 30px;
+}
+
+
+/* ==============================
+   BOUTONS
+============================== */
+
+.btn {
+    display: inline-block;
+
+    padding: 22px 45px;
+
+    font-size: 19px;
+    font-weight: 900;
+    text-decoration: none;
+
+    border-radius: 4px;
+
+    transition: all 0.25s ease;
+}
+
+
+/* BOUTONS ROUGES */
+
+.btn-red {
+    background: #ed1717;
+    color: #ffffff;
+}
+
+.btn-red:hover {
+    background: #b80000;
+    transform: translateY(-4px);
+
+    box-shadow: 0 10px 25px rgba(237,23,23,0.25);
+}
+
+
+/* ==============================
+   GOOGLE FORMS
+============================== */
+
+.participation {
+    background: #ffffff;
+    color: #080808;
+
+    padding: 100px 20px 130px;
+    text-align: center;
+}
+
+.participation h2 {
+    font-size: clamp(28px, 4vw, 45px);
+    font-weight: 900;
+
+    margin-bottom: 30px;
+}
+
+.participation p {
+    font-size: 18px;
+    line-height: 1.7;
+
+    margin-bottom: 45px;
+}
+
+
+/* ==============================
+   FOOTER / INSTAGRAM
+============================== */
+
+.footer {
+    background: #080808;
+    color: #ffffff;
+
+    padding: 110px 20px 45px;
+    text-align: center;
+}
+
+.footer h2 {
+    font-size: clamp(55px, 9vw, 100px);
+    font-weight: 1000;
+
+    letter-spacing: -4px;
+
+    margin-bottom: 65px;
+}
+
+
+/* BOUTON INSTAGRAM */
+
+.btn-instagram {
+    background: #ed1717;
+    color: #ffffff;
+
+    min-width: 280px;
+}
+
+.btn-instagram:hover {
+    background: #b80000;
+    transform: translateY(-4px);
+}
+
+
+/* COPYRIGHT */
+
+.copyright {
+    margin-top: 110px;
+
+    color: #777777;
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+/* ==============================
+   VERSION MOBILE
+============================== */
+
+@media screen and (max-width: 768px) {
+
+    .hero {
+        min-height: 550px;
+        height: 80vh;
+    }
+
+    .logo {
+        width: 340px;
+    }
+
+    .petition {
+        padding: 75px 7%;
+    }
+
+    .petition h1 {
+        margin-bottom: 45px;
+    }
+
+    .petition-text {
+        font-size: 17px;
+        line-height: 1.8;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 400px;
+
+        padding: 20px 15px;
+        font-size: 16px;
+    }
+
+    .participation {
+        padding: 75px 7% 100px;
+    }
+
+    .footer {
+        padding-top: 80px;
+    }
+
+    .footer h2 {
+        letter-spacing: -2px;
+    }
+
+    .copyright {
+        margin-top: 80px;
+        line-height: 1.8;
+    }
+}
+
+
+/* =====================================
+   CIEL ETOILE ANIME - NPEM
+===================================== */
+
+/* Fond de la pétition */
+
+.petition {
+    position: relative;
+    overflow: hidden;
+    background: #05070d;
+    color: white;
+}
+
+/* Couche des étoiles */
+
+.starfield {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+
+    background-image:
+        radial-gradient(2px 2px at 10% 20%, white 99%, transparent),
+        radial-gradient(1px 1px at 25% 70%, white 99%, transparent),
+        radial-gradient(2px 2px at 40% 35%, white 99%, transparent),
+        radial-gradient(1px 1px at 55% 80%, white 99%, transparent),
+        radial-gradient(2px 2px at 70% 15%, white 99%, transparent),
+        radial-gradient(1px 1px at 85% 55%, white 99%, transparent),
+        radial-gradient(2px 2px at 95% 85%, white 99%, transparent),
+        radial-gradient(1px 1px at 15% 90%, white 99%, transparent);
+
+    background-size: 350px 350px;
+    animation: starTwinkle 5s ease-in-out infinite alternate;
+}
+
+/* Protection du texte */
+
+.petition .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Etoiles filantes */
+
+.starfield::before,
+.starfield::after {
+    content: "";
+    position: absolute;
+
+    width: 150px;
+    height: 2px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.9),
+        white
+    );
+
+    border-radius: 50%;
+    opacity: 0;
+
+    transform: rotate(-35deg);
+    filter: drop-shadow(0 0 5px white);
+
+    animation: shootingStar 7s linear infinite;
+}
+
+/* Première étoile filante */
+
+.starfield::before {
+    top: 15%;
+    left: 80%;
+    animation-delay: 1s;
+}
+
+/* Deuxième étoile filante */
+
+.starfield::after {
+    top: 55%;
+    left: 65%;
+    animation-delay: 4s;
+    animation-duration: 9s;
+}
+
+/* Animation des étoiles */
+
+@keyframes starTwinkle {
+    from {
+        opacity: 0.45;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animation des étoiles filantes */
+
+@keyframes shootingStar {
+
+    0% {
+        opacity: 0;
+        transform: translate(0, 0) rotate(-35deg);
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    15% {
+        opacity: 0;
+        transform: translate(-650px, 450px) rotate(-35deg);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-650px, 450px) rotate(-35deg);
+    }
+}
+
+/* Respect des préférences d'animation */
+
+@media (prefers-reduced-motion: reduce) {
+    .starfield,
+    .starfield::before,
+    .starfield::after {
+        animation: none;
+    }
+}
